@@ -24,9 +24,11 @@ const run = async () => {
   const [userOne, userTwo] = await User.create({
     username: "User1",
     password: "12345",
+    token: crypto.randomUUID(),
   }, {
     username: "User2",
     password: "54321",
+    token: crypto.randomUUID(),
   });
 
   await Task.create({
